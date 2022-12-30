@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="<%= BASE_URL %>virus_favicon.ico" />
     <title>Top 3 - Nhân diện Covid-19 qua tiếng ho</title>
   </head>
@@ -18,9 +19,18 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
     <div class="container">
-      <div class="display"></div>
       <div class="controllers"></div>
-      <div id="response"></div>
+      <div class="row">
+        <div class="column" style="background-color:gray;">
+          <h2>Record</h2>
+          <div class="display"></div>
+        </div>
+        <div class="column" style="background-color:gray;">
+          <h2>Result</h2>
+          <h1 id="response"></h1>
+        </div>
+      </div>
+      <footer><p>© Nguyễn Thành Trung (trung.nguyendx@hcmut.edu.vn)</p></footer>
     </div>
     <script src="vrecorder.js"></script>
   </body>

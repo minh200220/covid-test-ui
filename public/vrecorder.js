@@ -96,7 +96,7 @@ const addButton = (id, funcString, text) => {
 };
 
 const addMessage = (text) => {
-  const msg = document.createElement("p");
+  const msg = document.createElement("h1");
   msg.textContent = text;
   display.append(msg);
 };
@@ -130,8 +130,8 @@ const application = (index) => {
       clearDisplay();
 
       addAudio();
-      addButton("submit", "submit()", "Submit Record");
       addButton("record", "record()", "Record Again");
+      addButton("submit", "submit()", "Submit Record");
       break;
 
     default:

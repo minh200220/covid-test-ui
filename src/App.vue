@@ -18,44 +18,6 @@
     <img id="logohcmut" src="./assets/hcmut.png" />
     <img id="logouit" src="./assets/uit.png" />
   </div>
-
-  <div id="up">
-    <button id="button" onclick="document.getElementById('inputfile').click()">
-      CHỌN FILE
-    </button>
-    <input
-      type="file"
-      id="inputfile"
-      style="display:none"
-      @change="onFileChange"
-    />
-    <button id="process" @click="onProcess">DỰ ĐOÁN</button>
-  </div>
-
-  <div id="down">
-    <div id="left">
-      <audio controls v-if="url" :key="url">
-        <source :src="url" alt="file đầu vào" type="audio/wav" />
-      </audio>
-    </div>
-    <div id="right">
-      <h2 style="color: white">
-        Xác suất dương tính là:
-        <span
-          v-if="res"
-          v-bind:class="{
-            low: low,
-            low_mid: low_mid,
-            mid: mid,
-            mid_high: mid_high,
-            high: high,
-          }"
-          >{{ res }}</span
-        >
-      </h2>
-    </div>
-  </div>
-  <footer><p>© Nguyễn Thành Trung (trung.nguyendx@hcmut.edu.vn)</p></footer>
 </template>
 
 <script>
