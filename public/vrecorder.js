@@ -71,7 +71,13 @@ const submit = () => {
   fetch("http://localhost:8000/api/predict/", {
     method: "POST",
     body: fd,
-  }).then((response) => console.log(response.json()));
+  })
+    .then((response) => console.log(response.json()))
+    .then((data) => {
+      let res = data["prob"];
+      document.getElementById("response").innerHTML = res || 0.56789;
+    })
+    .catch((e) => console.log("Error message", e));
 };
 
 const downloadAudio = () => {
